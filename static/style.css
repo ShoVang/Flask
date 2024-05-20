@@ -1,0 +1,54 @@
+body {
+  color: #333;
+  font-family: 'Merriweather', serif;
+  font-size: medium;
+}
+h1 {
+  color: #e68a00;
+  margin-left: 20px;
+  font-family: 'Merriweather', serif;
+}
+
+p {
+  color:#e68a00;
+  margin-left: 20px;
+  font-family:'Merriweather', serif;
+}
+
+table, th, td {
+  border: 1px solid #4CAF50;
+  padding: 5px;
+}
+
+th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.odd_row {
+  background-color: #f2f2f2;
+}
+
+.even_row {
+  background-color: #e6e6e6;
+}
+
+.button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+

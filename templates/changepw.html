@@ -1,0 +1,43 @@
+<!---
+Project 3: Zoo Web App
+Change Password Template
+Authors:
+    Kyler Kramer
+    Sho Vang
+-->
+
+
+
+
+
+{% extends 'base.html' %}
+{% block main %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <h1>Login</h1>
+    <form action="{{ url_for('changepw') }}" method="POST" novalidate>
+        {{ form.hidden_tag() }}
+        <div class="form-group">
+            <label for="Name">{{ form.name.label }}</label>
+            {{ form.name(size=30, class="form-control") }}
+        </div>
+        <div class="form-group">
+            <label for="Challenge Phrase">{{ form.challenge.label }}</label>
+            {{ form.challenge(size=30, class="form-control") }}
+        </div>
+        <div class="form-group">
+            <label for="New Password">{{ form.new_passwd.label }}</label>
+            {{ form.new_passwd(size=30, class="form-control") }}
+        </div>
+        <button type="submit" class="btn btn-primary">Login</button>
+</body>
+</html>
+
+{% endblock %}

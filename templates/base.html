@@ -1,0 +1,56 @@
+<!---
+Project 3: Zoo Web App
+Base Template
+Authors:
+    Kyler Kramer
+    Sho Vang
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <link rel="stylesheet"  type="text/css" href="{{ url_for('.static', filename='style.css')}} ">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    {% if request.path == '/' or request.path == '/index.html' or request.path == 'index' %}
+    <style>
+        body {
+        background-image: url('{{ url_for('.static', filename='images/giraffes.jpg') }}');
+        background-position: center 150px;
+        background-size: 90%;
+        background-repeat: no-repeat;
+
+    }
+    </style>
+    {% endif %}
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+    <div class="flash-messages">
+        {% for category, message in messages %}
+        <div class="flash-message flash-{{ category }}">
+            {{ message }}
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+    {% endwith %}
+
+
+{% block main %}
+{% endblock %}
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var flashMessages = document.querySelectorAll('.flash-message');
+        flashMessages.forEach(function(message, index) {
+            setTimeout(function() {
+                message.style.display = 'none';
+            }, (index + 1) * 5000); 
+        });
+    });
+</script>
+</body>
+</html>

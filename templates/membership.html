@@ -1,0 +1,59 @@
+<!---
+Project 3: Zoo Web App
+Membership Template
+Authors:
+    Kyler Kramer
+    Sho Vang
+-->
+
+
+
+{% extends 'base.html' %}
+{% block main %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membership Plans</title>
+    <style>
+        .membership-plan {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .membership-plan h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .membership-plan p {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Membership Plans</h1>
+
+    <div class="membership-plan">
+        <h2>Day Pass</h2>
+        <p>Price: $10</p>
+    </div>
+
+    <div class="membership-plan">
+        <h2> Six Month Pass</h2>
+        <p>Price: $30</p>
+    </div>
+
+    <div class="membership-plan">
+        <h2>Yearly Plan</h2>
+        <p>Price: $50</p>
+    </div>
+    <form methods="get" action="{{ url_for('index') }}">
+        <button type="submit" class="option-btn">Home</button>
+    </form>
+</body>
+</html>
+
+{% endblock %}

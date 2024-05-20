@@ -1,0 +1,32 @@
+<!---
+Project 3: Zoo Web App
+Admin Template
+Authors:
+    Kyler Kramer
+    Sho Vang
+-->
+
+
+
+{% extends 'base.html' %}
+{% block main %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zoo Information</title>
+</head>
+<body>
+    <h1>Welcome Admins</h1>
+    
+    <div> 
+        <a href="/status_report"><button>View Status Report</button></a>
+        <a href="/add_animals"><button>Add more animals to the table</button></a>
+        <a href="/view_animal"><button>view animals page  </button></a> 
+    </div>
+</body>
+</html>
+
+{% endblock %}

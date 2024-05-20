@@ -1,0 +1,43 @@
+<!---
+Project 3: Zoo Web App
+Login Template
+Authors:
+    Kyler Kramer
+    Sho Vang
+-->
+
+
+{% extends 'base.html' %}
+{% block main %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <h1>Login</h1>
+    <form action="{{ url_for('login') }}" method="POST" novalidate>
+        {{ form.hidden_tag() }}
+        <div class="form-group">
+            <label for="ID">{{ form.id.label }}</label>
+            {{ form.id(size=30, class="form-control") }}
+        </div>
+        <div class="form-group">
+            <label for="password">{{ form.passwd.label }}</label>
+            {{ form.passwd(size=30, class="form-control") }}
+        </div>
+        <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+    <form methods="get" action="{{ url_for('changepw') }}">
+        <button type="submit" class="option-btn">Change Password</button>
+    </form>
+    <form methods="get" action="{{ url_for('index') }}">
+        <button type="submit" class="option-btn">Home</button>
+    </form>
+</body>
+</html>
+
+{% endblock %}
