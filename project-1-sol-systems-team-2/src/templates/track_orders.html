@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block main %}
+    <!--  show the name of the user -->
+    <p>{{ user.name }} 's Recipes</p> <!-- How to remove the <>? maybe ?  -->
+    <table>
+        <tr>
+            <th>Number</th>
+            <th>Creation Date</th>
+            <th>Item</th>
+            <th>Status</th>
+        </tr>
+        <!--  show the user's orders on the table --> 
+        {% for order in orders %}
+        <td> {{order.number}} </td>
+        <td> {{order.creation_date}} </td>
+        <td> {{order.item}} </td>
+        <td> {{order.status}} </td>
+    </tr>
+            <!--  might need to connect it to the actual user's account  --> 
+
+        <!-- maybe dont use this ?
+        <li>Order ID: {{ order.id }}, Product ID: {{ order.product_id }}, Status: {{ order.status }}</li>
+        -->
+        
+        {% endfor %}
+    </ul>
+</body>
+</html>
