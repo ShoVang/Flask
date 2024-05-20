@@ -1,0 +1,34 @@
+@startuml
+
+left to right direction
+actor Customer as Cx
+actor Administrator as Admin
+
+rectangle "Animal Management System" {
+    usecase "Register" as Register
+    usecase "Login" as Login
+    usecase "View Inventory" as ViewInventory
+    usecase "Manage Inventory" as ManageInventory
+    usecase "View Locations" as ViewLocations
+    usecase "Manage Locations" as ManageLocations
+    usecase "View Quota" as ViewQuota
+    usecase "View Status Report" as ViewStatusReport
+    usecase "Edit Status Report" as EditStatusReport
+}
+
+Cx --> (Register)
+Cx --> (Login)
+Cx --> (View Inventory)
+Cx --> (View Locations)
+Cx --> (View Status Report)
+
+Admin --> (Login)
+Admin --> (View Inventory)
+Admin --> (Manage Inventory)
+Admin --> (View Locations)
+Admin --> (Manage Locations)
+Admin --> (View Quota)
+Admin --> (View Status Report)
+Admin --> (Edit Status Report)
+
+@enduml

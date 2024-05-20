@@ -1,0 +1,36 @@
+@startuml class
+
+class CX {
+    phoneNumber
+    name
+    passwd
+    membershipStatus
+}
+
+class animal { 
+    name 
+    type 
+    locations 
+    description
+    amount
+    picture
+     
+}
+
+class admin { 
+    id 
+    name 
+    passwd
+}
+class status_report { 
+    YTDgoal
+    current 
+}
+CX "n" o-> "1" animal: view
+admin "n" o-> "1" animal: view & edit 
+admin "n" --> "1" status_report: view & edit 
+CX "n" --> "1" status_report: memberships contrubute to 
+
+
+
+@enduml

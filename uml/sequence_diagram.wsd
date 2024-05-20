@@ -1,0 +1,25 @@
+
+
+participant Customer
+participant Admin
+participant "Animal Management System" as System
+participant Database
+
+Customer -> System: Sign Up
+Admin -> Database: Sign Up
+System -> Customer: Choose Membership
+Customer ---> Database: Customer added to the database
+Customer -> System: Log In
+System -> Database: Validate Credentials
+Database --> System: Credentials Valid
+System --> Customer: Log In Successful
+Customer -> System: View Animals
+System -> Database: Retrieve Animal Data
+Database --> System: Animal Data
+System --> Customer: Can view Animal Data
+Admin -> System: Edit AMS
+System -> Database: Update AMS in Database
+Database --> System: AMS Updated
+System --> Admin: AMS Edit Successful
+// not done gatta add in the pie chart part
+

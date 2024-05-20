@@ -1,0 +1,6 @@
+To change an account to admin in db: 
+
+sqlite3 app.db
+    UPDATE users
+    SET admin = 1
+    WHERE "ID" = <'id'>;
